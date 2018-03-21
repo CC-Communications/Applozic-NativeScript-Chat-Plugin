@@ -22,5 +22,12 @@ dependencies {
     // Describe plugin native Android dependencies like
 	// compile "groupName:pluginName:ver" 
     // EXAMPLE: compile "com.facebook.fresco:fresco:0.9.0+"
-	compile 'com.applozic.communication.uiwidget:mobicomkitui:5.0'
+	//compile 'com.applozic.communication.uiwidget:mobicomkitui:5.0'
+	 def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion : "11.8.0"
+	 def firebaseVersion  = project.hasProperty('firebaseVersion') ? project.firebaseVersion  : googlePlayServicesVersion
+   
+	compile "com.google.android.gms:play-services-maps:$googlePlayServicesVersion"
+	compile "com.google.android.gms:play-services-location:$googlePlayServicesVersion"
+	compile "com.google.firebase:firebase-messaging:$firebaseVersion"
+	compile 'com.applozic.communication.uiwidget:audiovideo:2.0'
 }
