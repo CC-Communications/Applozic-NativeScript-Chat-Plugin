@@ -25,7 +25,8 @@ export class ApplozicChat extends Common {
 
     // TO ENABLE AUDIO/VIDEO
     if (enableVideo || enableAudio)
-      throw new Error("Audio/Video Not Impletmented");
+    console.error("Audio/Video Not Impletmented");
+     // throw new Error("Audio/Video Not Impletmented");
 
     let alChatLauncher = ALChatLauncher.alloc().initWithApplicationId(
       user.applicationId
