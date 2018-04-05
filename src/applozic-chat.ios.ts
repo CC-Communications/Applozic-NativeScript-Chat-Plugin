@@ -27,11 +27,17 @@ export class ApplozicChat extends Common {
     alUser.imageLink = user.imageLink;
     alUser.imageLink = user.displayName;
 
+    /*
     let features = [];
     if (enableAudio) features.push("101");
     if (enableVideo) features.push("102");
     if (features.length > 0) {
       alUser.features = utils.ios.collections.jsArrayToNSArray(features);
+    }
+*/
+    if (enableAudio || enableVideo) {
+      ALApplozicSettings.setAudioVideoClassName("ALAudioVideoCallVC");
+      ALApplozicSettings.setAudioVideoEnabled(true);
     }
     let alChatLauncher = ALChatLauncher.alloc().initWithApplicationId(
       user.applicationId
@@ -44,6 +50,7 @@ export class ApplozicChat extends Common {
       function(response, error) {
         // Todo: add check for error and call errorCallback in case of error
         that.defaultSettings();
+
         this._isLoggedIn = true;
         successCallback(response);
       }
@@ -54,21 +61,27 @@ export class ApplozicChat extends Common {
     successCallback(this._isLoggedIn);
   }
 
-  public registerForPushNotification(
-    successCallback: any,
-    errorCallback: any
-  ) {}
+  public registerForPushNotification(successCallback: any, errorCallback: any) {
+    let alRegisterUserClientService = ALRegisterUserClientService.alloc().init();
+    alRegisterUserClientService.updateApnDeviceTokenWithCompletionWithCompletion(
+      ALUserDefaultsHandler.getApnDeviceToken(),
+      function(response, error) {
+        successCallback(true);
+      }
+    );
+  }
 
-  public refreshToken(token: any) {
+  public setPushToken(token: any) {
     ALUserDefaultsHandler.setApnDeviceToken(token);
   }
 
-  public proccessNotification(data: any) {
+  public processPushNotification(data: any): boolean {
     let alPushNotificationService = ALPushNotificationService.alloc().init();
-    alPushNotificationService.processPushNotificationUpdateUI(
+    let result = alPushNotificationService.processPushNotificationUpdateUI(
       data,
       parseInt(data.foreground)
     );
+    return result;
   }
 
   public launchChat() {
@@ -112,13 +125,6 @@ export class ApplozicChat extends Common {
       alPushAssist.topViewController,
       null
     );
-  }
-
-  public processPushNotification(stringifiedData: string) {
-    console.log("NOT IMPLEMENTED");
-  }
-  public setPushToken(token: string) {
-    console.log("NOT IMPLEMENTED");
   }
 
   public startAudioCall(userId: string) {
