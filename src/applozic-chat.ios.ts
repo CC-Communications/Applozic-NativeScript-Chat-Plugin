@@ -1,4 +1,5 @@
 import { Common } from "./applozic-chat.common";
+import * as utils from "utils/utils";
 
 declare var ALUser: any;
 declare var ALChatLauncher: any;
@@ -9,6 +10,8 @@ declare var ALApplozicSettings: any;
 declare var ALPushNotificationService: any;
 
 export class ApplozicChat extends Common {
+  private _isLoggedIn = false;
+
   public login(
     user: any,
     enableAudio: boolean,
@@ -22,12 +25,14 @@ export class ApplozicChat extends Common {
     alUser.applicationId = user.applicationId;
     alUser.authenticationTypeId = user.authenticationTypeId;
     alUser.imageLink = user.imageLink;
+    alUser.imageLink = user.displayName;
 
-    // TO ENABLE AUDIO/VIDEO
-    if (enableVideo || enableAudio)
-    console.error("Audio/Video Not Impletmented");
-     // throw new Error("Audio/Video Not Impletmented");
-
+    let features = [];
+    if (enableAudio) features.push("101");
+    if (enableVideo) features.push("102");
+    if (features.length > 0) {
+      alUser.features = utils.ios.collections.jsArrayToNSArray(features);
+    }
     let alChatLauncher = ALChatLauncher.alloc().initWithApplicationId(
       user.applicationId
     );
@@ -37,11 +42,16 @@ export class ApplozicChat extends Common {
     alRegisterUserClientService.initWithCompletionWithCompletion(
       alUser,
       function(response, error) {
-        //Todo: add check for error and call errorCallback in case of error
+        // Todo: add check for error and call errorCallback in case of error
         that.defaultSettings();
+        this._isLoggedIn = true;
         successCallback(response);
       }
     );
+  }
+  public isLoggedIn(successCallback: any, errorCallback: any) {
+    // this is a hack, it should actually check like the Android side does
+    successCallback(this._isLoggedIn);
   }
 
   public registerForPushNotification(
