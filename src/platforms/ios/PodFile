@@ -1,1 +1,3 @@
-pod 'Applozic', :git => 'https://github.com/AppLozic/Applozic-Chat-iOS-Framework.git', :branch => 'nativeScript'
+platform :ios, '8.1'
+pod 'TwilioVideo', '~> 1.1.0'
+pod 'Applozic', '~> 4.2.0'
