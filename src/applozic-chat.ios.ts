@@ -38,7 +38,7 @@ export class ApplozicChat extends Common {
     }
 */
     if (enableAudio || enableVideo) {
-      ALApplozicSettings.setAudioVideoClassName("ALAudioVideoCallVC");
+      ALApplozicSettings.setAudioVideoClassName("ALVideoAudioCall");
       ALApplozicSettings.setAudioVideoEnabled(true);
     }
     let alChatLauncher = ALChatLauncher.alloc().initWithApplicationId(
@@ -139,12 +139,16 @@ export class ApplozicChat extends Common {
     let alVOIPNotificationHandler = ALVOIPNotificationHandler.sharedManager();
     let alPushAssist = ALPushAssist.alloc().init();
 
-    alPushAssist.topViewController.presentViewControllerAnimatedCompletion(alAudioVideoCallVC, true, null);
-/*
+    alPushAssist.topViewController.presentViewControllerAnimatedCompletion(
+      alAudioVideoCallVC,
+      true,
+      null
+    );
+    /*
     let alVOIPNotificationHandler = ALVOIPNotificationHandler.sharedManager();
     let alPushAssist = ALPushAssist.alloc().init();
     alVOIPNotificationHandler.launchAVViewControllerAndLaunchForOrRoomIdAndCallAudioAndViewController(userId, 0, null, true, alPushAssist.topViewController);
-*/    
+*/
   }
   public startVideoCall(userId: string) {
     let alAudioVideoCallVC = ALAudioVideoCallVC.createAudioVideoController();
@@ -156,12 +160,16 @@ export class ApplozicChat extends Common {
     let alVOIPNotificationHandler = ALVOIPNotificationHandler.sharedManager();
     let alPushAssist = ALPushAssist.alloc().init();
 
-    alPushAssist.topViewController.presentViewControllerAnimatedCompletion(alAudioVideoCallVC, true, null);
-/*    
+    alPushAssist.topViewController.presentViewControllerAnimatedCompletion(
+      alAudioVideoCallVC,
+      true,
+      null
+    );
+    /*    
     let alVOIPNotificationHandler = ALVOIPNotificationHandler.sharedManager();
     let alPushAssist = ALPushAssist.alloc().init();
     alVOIPNotificationHandler.launchAVViewControllerAndLaunchForOrRoomIdAndCallAudioAndViewController(userId, 0, null, false, alPushAssist.topViewController);
-*/    
+*/
   }
   public logout(successCallback: any, errorCallback: any) {
     let alRegisterUserClientService = ALRegisterUserClientService.alloc().init();
