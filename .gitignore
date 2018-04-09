@@ -39,3 +39,5 @@ demo/report/stats.json
 !demo/webpack.config.js
 metadata*
 demo/typings
+native-src/ios/build
+native-src/ios/Pods

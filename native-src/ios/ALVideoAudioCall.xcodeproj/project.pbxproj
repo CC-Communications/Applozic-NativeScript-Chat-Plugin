@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1070E7D6207B132700DB034C /* AudioVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DF113E20786C23005BD875 /* AudioVideo.storyboard */; };
+		1070E7D7207B132700DB034C /* AudioVideo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10DF113F20786C23005BD875 /* AudioVideo.xcassets */; };
+		10DF114020786C23005BD875 /* ALAudioVideoCallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DF113B20786C23005BD875 /* ALAudioVideoCallVC.m */; };
+		10DF114120786C23005BD875 /* ALAudioVideoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DF113D20786C23005BD875 /* ALAudioVideoUtils.m */; };
+		10DF1142207876F1005BD875 /* ALAudioVideoCallVC.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 10DF113A20786C23005BD875 /* ALAudioVideoCallVC.h */; };
+		10DF1143207876F1005BD875 /* ALAudioVideoUtils.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 10DF113C20786C23005BD875 /* ALAudioVideoUtils.h */; };
+		10DF114B20788239005BD875 /* Applozic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DF114A20788239005BD875 /* Applozic.framework */; };
+		10DF114D2078828F005BD875 /* TwilioVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DF114C2078828F005BD875 /* TwilioVideo.framework */; };
+		BF6F32E0D8B63FE0A3BE47A8 /* Pods_ALVideoAudioCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D50DAF850976C77C4962C18 /* Pods_ALVideoAudioCall.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		10DF112B20786BEE005BD875 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				10DF1142207876F1005BD875 /* ALAudioVideoCallVC.h in Copy Files */,
+				10DF1143207876F1005BD875 /* ALAudioVideoUtils.h in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1070E7D0207B12B300DB034C /* ALAudioVideoCallResources.bundle */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = ALAudioVideoCallResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1070E7D2207B12B400DB034C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10DF112D20786BEE005BD875 /* ALVideoAudioCall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = ALVideoAudioCall.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		10DF113A20786C23005BD875 /* ALAudioVideoCallVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAudioVideoCallVC.h; sourceTree = "<group>"; };
+		10DF113B20786C23005BD875 /* ALAudioVideoCallVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAudioVideoCallVC.m; sourceTree = "<group>"; };
+		10DF113C20786C23005BD875 /* ALAudioVideoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAudioVideoUtils.h; sourceTree = "<group>"; };
+		10DF113D20786C23005BD875 /* ALAudioVideoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAudioVideoUtils.m; sourceTree = "<group>"; };
+		10DF113E20786C23005BD875 /* AudioVideo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioVideo.storyboard; sourceTree = "<group>"; };
+		10DF113F20786C23005BD875 /* AudioVideo.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AudioVideo.xcassets; sourceTree = "<group>"; };
+		10DF114A20788239005BD875 /* Applozic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Applozic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10DF114C2078828F005BD875 /* TwilioVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwilioVideo.framework; path = Pods/TwilioVideo/TwilioVideo.framework; sourceTree = "<group>"; };
+		1D50DAF850976C77C4962C18 /* Pods_ALVideoAudioCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALVideoAudioCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5210295C73B8233CD0DC99B3 /* Pods-ALVideoAudioCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALVideoAudioCall.release.xcconfig"; path = "Pods/Target Support Files/Pods-ALVideoAudioCall/Pods-ALVideoAudioCall.release.xcconfig"; sourceTree = "<group>"; };
+		EC6A7A67A6C592B30E5B9C45 /* Pods-ALVideoAudioCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALVideoAudioCall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ALVideoAudioCall/Pods-ALVideoAudioCall.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1070E7CD207B12B300DB034C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10DF112A20786BEE005BD875 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10DF114B20788239005BD875 /* Applozic.framework in Frameworks */,
+				10DF114D2078828F005BD875 /* TwilioVideo.framework in Frameworks */,
+				BF6F32E0D8B63FE0A3BE47A8 /* Pods_ALVideoAudioCall.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1070E7D1207B12B400DB034C /* ALAudioVideoCallResources */ = {
+			isa = PBXGroup;
+			children = (
+				10DF113F20786C23005BD875 /* AudioVideo.xcassets */,
+				10DF113E20786C23005BD875 /* AudioVideo.storyboard */,
+				1070E7D2207B12B400DB034C /* Info.plist */,
+			);
+			path = ALAudioVideoCallResources;
+			sourceTree = "<group>";
+		};
+		10DF112420786BEE005BD875 = {
+			isa = PBXGroup;
+			children = (
+				10DF113920786C23005BD875 /* AudioVideo */,
+				1070E7D1207B12B400DB034C /* ALAudioVideoCallResources */,
+				10DF112E20786BEE005BD875 /* Products */,
+				81832CAF2589C47E29CAA0E2 /* Pods */,
+				1EC70EE1AA11B45E90D69457 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		10DF112E20786BEE005BD875 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10DF112D20786BEE005BD875 /* ALVideoAudioCall.a */,
+				1070E7D0207B12B300DB034C /* ALAudioVideoCallResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10DF113920786C23005BD875 /* AudioVideo */ = {
+			isa = PBXGroup;
+			children = (
+				10DF113A20786C23005BD875 /* ALAudioVideoCallVC.h */,
+				10DF113B20786C23005BD875 /* ALAudioVideoCallVC.m */,
+				10DF113C20786C23005BD875 /* ALAudioVideoUtils.h */,
+				10DF113D20786C23005BD875 /* ALAudioVideoUtils.m */,
+			);
+			path = AudioVideo;
+			sourceTree = "<group>";
+		};
+		1EC70EE1AA11B45E90D69457 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D50DAF850976C77C4962C18 /* Pods_ALVideoAudioCall.framework */,
+				10DF114A20788239005BD875 /* Applozic.framework */,
+				10DF114C2078828F005BD875 /* TwilioVideo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81832CAF2589C47E29CAA0E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC6A7A67A6C592B30E5B9C45 /* Pods-ALVideoAudioCall.debug.xcconfig */,
+				5210295C73B8233CD0DC99B3 /* Pods-ALVideoAudioCall.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1070E7CF207B12B300DB034C /* ALAudioVideoCallResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1070E7D3207B12B400DB034C /* Build configuration list for PBXNativeTarget "ALAudioVideoCallResources" */;
+			buildPhases = (
+				1070E7CC207B12B300DB034C /* Sources */,
+				1070E7CD207B12B300DB034C /* Frameworks */,
+				1070E7CE207B12B300DB034C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ALAudioVideoCallResources;
+			productName = ALAudioVideoCallResources;
+			productReference = 1070E7D0207B12B300DB034C /* ALAudioVideoCallResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		10DF112C20786BEE005BD875 /* ALVideoAudioCall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10DF113620786BEE005BD875 /* Build configuration list for PBXNativeTarget "ALVideoAudioCall" */;
+			buildPhases = (
+				F89A21FBB06952364CE0035B /* [CP] Check Pods Manifest.lock */,
+				10DF112920786BEE005BD875 /* Sources */,
+				10DF112A20786BEE005BD875 /* Frameworks */,
+				10DF112B20786BEE005BD875 /* Copy Files */,
+				E37CD97695C32108ED92D2DF /* [CP] Copy Pods Resources */,
+				1070E7BA207AD50700DB034C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ALVideoAudioCall;
+			productName = ALVideoAudioCall;
+			productReference = 10DF112D20786BEE005BD875 /* ALVideoAudioCall.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10DF112520786BEE005BD875 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "CC Communications";
+				TargetAttributes = {
+					1070E7CF207B12B300DB034C = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					10DF112C20786BEE005BD875 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 10DF112820786BEE005BD875 /* Build configuration list for PBXProject "ALVideoAudioCall" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 10DF112420786BEE005BD875;
+			productRefGroup = 10DF112E20786BEE005BD875 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10DF112C20786BEE005BD875 /* ALVideoAudioCall */,
+				1070E7CF207B12B300DB034C /* ALAudioVideoCallResources */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1070E7BA207AD50700DB034C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1070E7CE207B12B300DB034C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1070E7D6207B132700DB034C /* AudioVideo.storyboard in Resources */,
+				1070E7D7207B132700DB034C /* AudioVideo.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E37CD97695C32108ED92D2DF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ALVideoAudioCall/Pods-ALVideoAudioCall-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F89A21FBB06952364CE0035B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ALVideoAudioCall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1070E7CC207B12B300DB034C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10DF112920786BEE005BD875 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10DF114020786C23005BD875 /* ALAudioVideoCallVC.m in Sources */,
+				10DF114120786C23005BD875 /* ALAudioVideoUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1070E7D4207B12B400DB034C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ALAudioVideoCallResources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		1070E7D5207B12B400DB034C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ALAudioVideoCallResources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		10DF113420786BEE005BD875 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		10DF113520786BEE005BD875 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10DF113720786BEE005BD875 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC6A7A67A6C592B30E5B9C45 /* Pods-ALVideoAudioCall.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/TwilioVideo",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYMROOT = build;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10DF113820786BEE005BD875 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5210295C73B8233CD0DC99B3 /* Pods-ALVideoAudioCall.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/TwilioVideo",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYMROOT = build;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1070E7D3207B12B400DB034C /* Build configuration list for PBXNativeTarget "ALAudioVideoCallResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1070E7D4207B12B400DB034C /* Debug */,
+				1070E7D5207B12B400DB034C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10DF112820786BEE005BD875 /* Build configuration list for PBXProject "ALVideoAudioCall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10DF113420786BEE005BD875 /* Debug */,
+				10DF113520786BEE005BD875 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10DF113620786BEE005BD875 /* Build configuration list for PBXNativeTarget "ALVideoAudioCall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10DF113720786BEE005BD875 /* Debug */,
+				10DF113820786BEE005BD875 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10DF112520786BEE005BD875 /* Project object */;
+}

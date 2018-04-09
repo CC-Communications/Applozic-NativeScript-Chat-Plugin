@@ -8,8 +8,8 @@ declare var ALPushAssist: any;
 declare var ALUserDefaultsHandler: any;
 declare var ALApplozicSettings: any;
 declare var ALPushNotificationService: any;
-declare var ALVOIPNotificationHandler: any;
 declare var ALAudioVideoCallVC: any;
+declare var ALVOIPNotificationHandler: any;
 
 export class ApplozicChat extends Common {
   private _isLoggedIn = false;
@@ -38,7 +38,7 @@ export class ApplozicChat extends Common {
     }
 */
     if (enableAudio || enableVideo) {
-      ALApplozicSettings.setAudioVideoClassName("ALVideoAudioCall");
+      ALApplozicSettings.setAudioVideoClassName("ALVideoAudioCallVC");
       ALApplozicSettings.setAudioVideoEnabled(true);
     }
     let alChatLauncher = ALChatLauncher.alloc().initWithApplicationId(
@@ -139,16 +139,7 @@ export class ApplozicChat extends Common {
     let alVOIPNotificationHandler = ALVOIPNotificationHandler.sharedManager();
     let alPushAssist = ALPushAssist.alloc().init();
 
-    alPushAssist.topViewController.presentViewControllerAnimatedCompletion(
-      alAudioVideoCallVC,
-      true,
-      null
-    );
-    /*
-    let alVOIPNotificationHandler = ALVOIPNotificationHandler.sharedManager();
-    let alPushAssist = ALPushAssist.alloc().init();
-    alVOIPNotificationHandler.launchAVViewControllerAndLaunchForOrRoomIdAndCallAudioAndViewController(userId, 0, null, true, alPushAssist.topViewController);
-*/
+    alPushAssist.topViewController.presentViewControllerAnimatedCompletion(alAudioVideoCallVC, true, null);
   }
   public startVideoCall(userId: string) {
     let alAudioVideoCallVC = ALAudioVideoCallVC.createAudioVideoController();
@@ -160,16 +151,7 @@ export class ApplozicChat extends Common {
     let alVOIPNotificationHandler = ALVOIPNotificationHandler.sharedManager();
     let alPushAssist = ALPushAssist.alloc().init();
 
-    alPushAssist.topViewController.presentViewControllerAnimatedCompletion(
-      alAudioVideoCallVC,
-      true,
-      null
-    );
-    /*    
-    let alVOIPNotificationHandler = ALVOIPNotificationHandler.sharedManager();
-    let alPushAssist = ALPushAssist.alloc().init();
-    alVOIPNotificationHandler.launchAVViewControllerAndLaunchForOrRoomIdAndCallAudioAndViewController(userId, 0, null, false, alPushAssist.topViewController);
-*/
+    alPushAssist.topViewController.presentViewControllerAnimatedCompletion(alAudioVideoCallVC, true, null);
   }
   public logout(successCallback: any, errorCallback: any) {
     let alRegisterUserClientService = ALRegisterUserClientService.alloc().init();
