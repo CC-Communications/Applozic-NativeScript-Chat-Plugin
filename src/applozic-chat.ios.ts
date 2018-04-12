@@ -1,5 +1,7 @@
 import { Common } from "./applozic-chat.common";
 import * as utils from "utils/utils";
+import * as platform from "platform";
+import * as application from "application";
 
 declare var ALUser: any;
 declare var ALChatLauncher: any;
@@ -38,7 +40,7 @@ export class ApplozicChat extends Common {
     }
 */
     if (enableAudio || enableVideo) {
-      ALApplozicSettings.setAudioVideoClassName("ALVideoAudioCallVC");
+      ALApplozicSettings.setAudioVideoClassName("ALAudioVideoCallVC");
       ALApplozicSettings.setAudioVideoEnabled(true);
     }
     let alChatLauncher = ALChatLauncher.alloc().initWithApplicationId(
@@ -130,28 +132,32 @@ export class ApplozicChat extends Common {
   }
 
   public startAudioCall(userId: string) {
-    let alAudioVideoCallVC = ALAudioVideoCallVC.createAudioVideoController();
-    alAudioVideoCallVC.userID = userId;
-    alAudioVideoCallVC.launchFor = 0;
-    alAudioVideoCallVC.baseRoomId = null;
-    alAudioVideoCallVC.callForAudio = true;
-
-    let alVOIPNotificationHandler = ALVOIPNotificationHandler.sharedManager();
+    let roomId = platform.device.uuid + ":" + new Date().getTime().toString();
+    let voipHandler = ALVOIPNotificationHandler.sharedManager();
     let alPushAssist = ALPushAssist.alloc().init();
 
-    alPushAssist.topViewController.presentViewControllerAnimatedCompletion(alAudioVideoCallVC, true, null);
+    voipHandler.launchAVViewControllerAndLaunchForOrRoomIdAndCallAudioAndViewController(
+      userId,
+      0,
+      roomId,
+      true,
+      utils.ios.getter(UIApplication, UIApplication.sharedApplication).keyWindow
+        .rootViewController
+    );
   }
   public startVideoCall(userId: string) {
-    let alAudioVideoCallVC = ALAudioVideoCallVC.createAudioVideoController();
-    alAudioVideoCallVC.userID = userId;
-    alAudioVideoCallVC.launchFor = 0;
-    alAudioVideoCallVC.baseRoomId = null;
-    alAudioVideoCallVC.callForAudio = true;
-
-    let alVOIPNotificationHandler = ALVOIPNotificationHandler.sharedManager();
+    let roomId = platform.device.uuid + ":" + new Date().getTime().toString();
+    let voipHandler = ALVOIPNotificationHandler.sharedManager();
     let alPushAssist = ALPushAssist.alloc().init();
 
-    alPushAssist.topViewController.presentViewControllerAnimatedCompletion(alAudioVideoCallVC, true, null);
+    voipHandler.launchAVViewControllerAndLaunchForOrRoomIdAndCallAudioAndViewController(
+      userId,
+      0,
+      roomId,
+      false,
+      utils.ios.getter(UIApplication, UIApplication.sharedApplication).keyWindow
+        .rootViewController
+    );
   }
   public logout(successCallback: any, errorCallback: any) {
     let alRegisterUserClientService = ALRegisterUserClientService.alloc().init();

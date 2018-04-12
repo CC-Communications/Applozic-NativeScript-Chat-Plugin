@@ -1,6 +1,0 @@
-framework module ALVideoAudioCall {
-  umbrella header "ALVideoAudioCall.h"
-
-  export *
-  module * { export * }
-}
