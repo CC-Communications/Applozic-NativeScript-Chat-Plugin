@@ -31,14 +31,6 @@ export class ApplozicChat extends Common {
     alUser.imageLink = user.imageLink;
     alUser.imageLink = user.displayName;
 
-    /*
-    let features = [];
-    if (enableAudio) features.push("101");
-    if (enableVideo) features.push("102");
-    if (features.length > 0) {
-      alUser.features = utils.ios.collections.jsArrayToNSArray(features);
-    }
-*/
     if (enableAudio || enableVideo) {
       ALApplozicSettings.setAudioVideoClassName("ALAudioVideoCallVC");
       ALApplozicSettings.setAudioVideoEnabled(true);
@@ -52,17 +44,13 @@ export class ApplozicChat extends Common {
     alRegisterUserClientService.initWithCompletionWithCompletion(
       alUser,
       function(response, error) {
-        // Todo: add check for error and call errorCallback in case of error
-        that.defaultSettings();
-
         this._isLoggedIn = true;
         successCallback(response);
       }
     );
   }
   public isLoggedIn(successCallback: any, errorCallback: any) {
-    // this is a hack, it should actually check like the Android side does
-    successCallback(this._isLoggedIn);
+    successCallback(ALUserDefaultsHandler.isLoggedIn());
   }
 
   public registerForPushNotification(successCallback: any, errorCallback: any) {
@@ -114,7 +102,7 @@ export class ApplozicChat extends Common {
   }
 
   public launchChatWithGroupId(
-    groupId: number,
+    groupId: string,
     successCallback: any,
     errorCallback: any
   ) {
@@ -124,7 +112,7 @@ export class ApplozicChat extends Common {
     let alPushAssist = ALPushAssist.alloc().init();
     alChatLauncher.launchIndividualChatWithGroupIdWithDisplayNameAndViewControllerObjectAndWithText(
       null,
-      groupId,
+      parseInt(groupId),
       null,
       alPushAssist.topViewController,
       null

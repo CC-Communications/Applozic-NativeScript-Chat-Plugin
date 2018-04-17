@@ -41,3 +41,4 @@ metadata*
 demo/typings
 native-src/ios/build
 native-src/ios/Pods
+publish/package-lock.json
