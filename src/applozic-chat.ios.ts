@@ -29,7 +29,7 @@ export class ApplozicChat extends Common {
     alUser.applicationId = user.applicationId;
     alUser.authenticationTypeId = user.authenticationTypeId;
     alUser.imageLink = user.imageLink;
-    alUser.imageLink = user.displayName;
+    alUser.displayName = user.displayName;
 
     if (enableAudio || enableVideo) {
       ALApplozicSettings.setAudioVideoClassName("ALAudioVideoCallVC");
