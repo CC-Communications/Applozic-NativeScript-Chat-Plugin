@@ -1,8 +1,14 @@
 use_frameworks!
-platform :ios, '8.1'
 pod ‘ALVideoAudioChatVC’, :git => 'https://github.com/CC-Communications/ALVideoAudioChatVC.git'
 
 post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if ['Applozic'].include? target.name
+      target.build_configurations.each do |config|
+          config.build_settings['SWIFT_VERSION'] = '4.2'
+      end
+    end
+  end
   installer.aggregate_targets.each do |target|
     copy_pods_resources_path = "Pods/Target Support Files/#{target.name}/#{target.name}-resources.sh"
     string_to_replace = '--compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"'
