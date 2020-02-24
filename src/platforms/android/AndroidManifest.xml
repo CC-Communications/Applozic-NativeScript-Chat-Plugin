@@ -72,6 +72,7 @@ xmlns:tools="http://schemas.android.com/tools"
 				android:parentActivityName="MainActivity"
 				android:theme="@style/ApplozicTheme"
 				android:launchMode="singleTask" 
+				 tools:node="replace"
 				>
 			<!-- Parent activity meta-data to support API level 7+ -->
 		<meta-data
@@ -109,9 +110,11 @@ xmlns:tools="http://schemas.android.com/tools"
 
 		<activity android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.FullScreenImageActivity"
 				android:configChanges="keyboardHidden|screenSize|smallestScreenSize|screenLayout|orientation"
-				android:label="Image"
+					android:label="Image"
 		android:parentActivityName="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
-				android:theme="@style/Applozic_FullScreen_Theme">
+				android:theme="@style/Applozic_FullScreen_Theme"
+				 tools:node="replace"
+				>
 			<!-- Parent activity meta-data to support API level 7+ -->
 		<meta-data
 				android:name="android.support.PARENT_ACTIVITY"

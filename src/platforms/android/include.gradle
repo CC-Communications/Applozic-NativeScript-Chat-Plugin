@@ -29,6 +29,6 @@ dependencies {
 	compile "com.google.android.gms:play-services-maps:$googlePlayServicesVersion"
 	compile "com.google.android.gms:play-services-location:$googlePlayServicesVersion"
 	compile "com.google.firebase:firebase-messaging:$firebaseVersion"
-	compile 'com.applozic.communication.uiwidget:mobicomkitui:5.11'
+	compile 'com.applozic.communication.uiwidget:mobicomkitui:5.51.3'
 	compile 'com.applozic.communication.uiwidget:audiovideo:2.0'
 }
